@@ -3,12 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="application-name" content="Coin Pusher Frenzy">
-    <meta name="description" content="Coin Pusher Frenzy is a casual mobile game that combines classic arcade coin pusher physics with Roguelike deck building strategy. Drop coins, collect items, and score big in randomly generated stages.">
-    <meta property="og:title" content="Coin Pusher Frenzy">
-    <meta property="og:site_name" content="Coin Pusher Frenzy">
-    <meta property="og:description" content="Coin Pusher Frenzy is a casual mobile game that combines classic arcade coin pusher physics with Roguelike deck building strategy. Drop coins, collect items, and score big in randomly generated stages.">
-    <title>Coin Pusher Frenzy</title>
+    <meta name="description" content="Sincen Games - Indie Game Development Team. Creating fun and engaging casual games for Android and iOS platforms.">
+    <title>Sincen Games - Indie Game Development Team</title>
     <style>
         * {
             margin: 0;
@@ -25,9 +21,9 @@
         }
 
         .header-banner {
-            background: linear-gradient(135deg, #2c3e50 0%, #34495e 50%, #2c3e50 100%);
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
             color: #fff;
-            padding: 50px 20px;
+            padding: 60px 20px;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -43,108 +39,150 @@
             background: repeating-linear-gradient(
                 45deg,
                 transparent,
-                transparent 30px,
-                rgba(255,255,255,0.02) 30px,
-                rgba(255,255,255,0.02) 60px
+                transparent 40px,
+                rgba(255,255,255,0.02) 40px,
+                rgba(255,255,255,0.02) 80px
             );
         }
 
         .header-banner h1 {
-            font-size: 64px;
+            font-size: 52px;
             font-weight: 900;
-            margin: 0;
+            margin: 0 0 12px 0;
             position: relative;
             letter-spacing: -1px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
-        .content {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 40px 30px;
+        .header-banner .subtitle {
+            font-size: 18px;
+            color: #a0aec0;
+            position: relative;
+            font-weight: 300;
         }
 
-        .app-title {
-            font-weight: bold;
-            margin-bottom: 6px;
-            font-size: 15px;
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 50px 30px;
         }
 
         .about-section {
-            margin-bottom: 40px;
+            margin-bottom: 50px;
         }
 
         .about-section h2 {
-            font-size: 22px;
+            font-size: 24px;
             font-weight: bold;
             color: #222;
             margin-bottom: 16px;
-            padding-bottom: 8px;
+            padding-bottom: 10px;
             border-bottom: 2px solid #e9ecef;
         }
 
-        .about-section h3 {
-            font-size: 17px;
-            font-weight: bold;
-            color: #333;
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
-
         .about-section p {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            color: #444;
         }
 
-        .about-section ul {
-            margin-left: 24px;
-            margin-bottom: 16px;
+        .games-section {
+            margin-bottom: 50px;
         }
 
-        .about-section li {
+        .games-section h2 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #222;
+            margin-bottom: 24px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e9ecef;
+        }
+
+        .game-card {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            padding: 24px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .game-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+        }
+
+        .game-card .game-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 18px;
+            flex-shrink: 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        .game-card .game-info {
+            flex: 1;
+        }
+
+        .game-card .game-info h3 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #222;
             margin-bottom: 6px;
         }
 
-        .screenshots {
-            display: flex;
-            gap: 24px;
-            margin-bottom: 50px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .screenshot {
-            flex: 1;
-            min-width: 200px;
-            max-width: 220px;
-        }
-
-        .screenshot img {
-            width: 100%;
-            height: auto;
-            border-radius: 4px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-
-        .links {
+        .game-card .game-info p {
             font-size: 14px;
-        }
-
-        .links p {
+            color: #666;
             margin-bottom: 8px;
         }
 
-        .links a {
+        .game-card .game-info a {
             color: #1a73e8;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .game-card .game-info a:hover {
             text-decoration: underline;
         }
 
-        .links a:hover {
-            color: #1557b0;
+        .contact-section {
+            margin-bottom: 30px;
+        }
+
+        .contact-section h2 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #222;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e9ecef;
+        }
+
+        .contact-section p {
+            margin-bottom: 8px;
+        }
+
+        .contact-section a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+
+        .contact-section a:hover {
+            text-decoration: underline;
         }
 
         @media (max-width: 768px) {
             .header-banner h1 {
-                font-size: 40px;
+                font-size: 36px;
+            }
+
+            .header-banner .subtitle {
+                font-size: 16px;
             }
 
             .header-banner {
@@ -155,73 +193,44 @@
                 padding: 30px 20px;
             }
 
-            .screenshots {
+            .game-card {
+                flex-direction: column;
+                text-align: center;
                 gap: 16px;
-            }
-
-            .screenshot {
-                min-width: 140px;
-                max-width: 160px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .header-banner h1 {
-                font-size: 32px;
-            }
-
-            .screenshot {
-                min-width: 120px;
-                max-width: 140px;
             }
         }
     </style>
 </head>
 <body>
     <div class="header-banner">
-        <h1>Coin Pusher Frenzy</h1>
+        <h1>Sincen Games</h1>
+        <p class="subtitle">Indie Game Development Team</p>
     </div>
 
     <div class="content">
         <div class="about-section">
-            <h2>About Coin Pusher Frenzy</h2>
-            <p><strong>Coin Pusher Frenzy</strong> is a mobile game application designed for casual gaming entertainment. It brings the classic arcade coin pusher experience to your smartphone, combined with innovative Roguelike deck building mechanics.</p>
-            
-            <h3>App Purpose</h3>
-            <p>The purpose of Coin Pusher Frenzy is to provide players with a fun, engaging casual gaming experience that combines the satisfying physics of coin pusher machines with strategic deck building gameplay. Players can enjoy quick gaming sessions while progressively unlocking new items and strategies.</p>
-            
-            <h3>Key Features</h3>
-            <ul>
-                <li><strong>Classic Coin Pusher Gameplay</strong> – Drop coins onto the pusher platform and watch them fall to earn rewards</li>
-                <li><strong>Roguelike Deck Building</strong> – Collect and combine powerful items to create unique strategies</li>
-                <li><strong>Randomly Generated Stages</strong> – Each playthrough offers a fresh, unique challenge</li>
-                <li><strong>Strategic Planning</strong> – Plan your moves carefully to maximize your score</li>
-                <li><strong>Lucky Spin Bonus</strong> – Spin the wheel for bonus rewards and special power-ups</li>
-            </ul>
-            
-            <h3>Who Is It For?</h3>
-            <p>Coin Pusher Frenzy is designed for casual gamers who enjoy arcade-style games and strategy games. It's suitable for players of all ages looking for a fun, free-to-play mobile gaming experience that is easy to pick up but offers depth for those who want to master it.</p>
+            <h2>About Us</h2>
+            <p>We are a small indie game development team focused on creating fun, engaging, and high-quality casual games for players around the world.</p>
+            <p>We specialize in combining classic arcade gameplay mechanics with modern game design principles to deliver unique gaming experiences that are easy to pick up but hard to put down.</p>
+            <p>Our mission is to bring joy and entertainment to players through innovative mobile games that can be enjoyed anytime, anywhere.</p>
         </div>
 
-        <div class="screenshots">
-            <div class="screenshot">
-                <img src="screenshot1.png" alt="Game Screenshot 1">
-            </div>
-            <div class="screenshot">
-                <img src="screenshot2.png" alt="Game Screenshot 2">
-            </div>
-            <div class="screenshot">
-                <img src="screenshot3.png" alt="Game Screenshot 3">
-            </div>
-            <div class="screenshot">
-                <img src="screenshot4.png" alt="Game Screenshot 4">
+        <div class="games-section">
+            <h2>Our Games</h2>
+            
+            <div class="game-card">
+                <img src="game-logo.png" alt="Coin Pusher Frenzy" class="game-icon">
+                <div class="game-info">
+                    <h3>Coin Pusher Frenzy</h3>
+                    <p>A casual strategy game that fuses classic arcade coin pusher with exciting Roguelike deck building!</p>
+                    <a href="coin-pusher-game-home.html">View Game Details &rarr;</a>
+                </div>
             </div>
         </div>
 
-        <div class="links">
-            <p>Google Play: <a href="https://play.google.com/store/apps/details?id=com.ningfu.coinpusherfrenzy" target="_blank">Coin Pusher Frenzy - Apps on Google Play</a></p>
-            <p>Privacy Policy: <a href="privacy-policy.html">Privacy Policy</a></p>
-            <p>Email: funing0721b@live.com</p>
+        <div class="contact-section">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:funing0721b@live.com">funing0721b@live.com</a></p>
         </div>
     </div>
 </body>
