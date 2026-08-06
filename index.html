@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin Pusher Frenzy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+
+        .header-banner {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 50%, #2c3e50 100%);
+            color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-banner::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 30px,
+                rgba(255,255,255,0.02) 30px,
+                rgba(255,255,255,0.02) 60px
+            );
+        }
+
+        .header-banner h1 {
+            font-size: 64px;
+            font-weight: 900;
+            margin: 0;
+            position: relative;
+            letter-spacing: -1px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 30px;
+        }
+
+        .app-title {
+            font-weight: bold;
+            margin-bottom: 6px;
+            font-size: 15px;
+        }
+
+        .description {
+            margin-bottom: 40px;
+        }
+
+        .description p {
+            margin-bottom: 6px;
+        }
+
+        .screenshots {
+            display: flex;
+            gap: 24px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .screenshot {
+            flex: 1;
+            min-width: 200px;
+            max-width: 220px;
+        }
+
+        .screenshot img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .links {
+            font-size: 14px;
+        }
+
+        .links p {
+            margin-bottom: 8px;
+        }
+
+        .links a {
+            color: #1a73e8;
+            text-decoration: underline;
+        }
+
+        .links a:hover {
+            color: #1557b0;
+        }
+
+        @media (max-width: 768px) {
+            .header-banner h1 {
+                font-size: 40px;
+            }
+
+            .header-banner {
+                padding: 40px 16px;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
+            .screenshots {
+                gap: 16px;
+            }
+
+            .screenshot {
+                min-width: 140px;
+                max-width: 160px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-banner h1 {
+                font-size: 32px;
+            }
+
+            .screenshot {
+                min-width: 120px;
+                max-width: 140px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header-banner">
+        <h1>Coin Pusher Frenzy</h1>
+    </div>
+
+    <div class="content">
+        <div class="description">
+            <p class="app-title">Coin Pusher Frenzy</p>
+            <p>A casual strategy game that fuses the classic arcade coin pusher with exciting Roguelike deck building!</p>
+            <p>Drop coins with precision, plan your moves strategically, and mix powerful items to score big in randomly generated stages.</p>
+            <p>Experience the best of both worlds — addictive coin-pushing fun and deep card strategy.</p>
+        </div>
+
+        <div class="screenshots">
+            <div class="screenshot">
+                <img src="screenshot1.png" alt="Game Screenshot 1">
+            </div>
+            <div class="screenshot">
+                <img src="screenshot2.png" alt="Game Screenshot 2">
+            </div>
+            <div class="screenshot">
+                <img src="screenshot3.png" alt="Game Screenshot 3">
+            </div>
+            <div class="screenshot">
+                <img src="screenshot4.png" alt="Game Screenshot 4">
+            </div>
+        </div>
+
+        <div class="links">
+            <p>Google Play: <a href="https://play.google.com/store/apps/details?id=com.ningfu.coinpusherfrenzy" target="_blank">Coin Pusher Frenzy - Apps on Google Play</a></p>
+            <p>Privacy Policy: <a href="privacy-policy.html">Privacy Policy</a></p>
+            <p>Email: funing0721b@live.com</p>
+        </div>
+    </div>
+</body>
+</html>
