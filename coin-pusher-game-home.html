@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="application-name" content="Coin Pusher Frenzy">
-    <meta name="description" content="Coin Pusher Frenzy is a casual mobile game that combines classic arcade coin pusher physics with Roguelike deck building strategy. Compete on Google Play Games leaderboards, play with friends, and sync progress with cloud save.">
+    <meta name="description" data-i18n-attr="content:home.metaDesc" content="Coin Pusher Frenzy is a casual mobile game that combines classic arcade coin pusher physics with Roguelike deck building strategy. Compete on Google Play Games leaderboards, play with friends, and sync progress with cloud save.">
     <meta property="og:title" content="Coin Pusher Frenzy">
     <meta property="og:site_name" content="Coin Pusher Frenzy">
-    <meta property="og:description" content="Coin Pusher Frenzy is a casual mobile game that combines classic arcade coin pusher physics with Roguelike deck building strategy. Compete on Google Play Games leaderboards, play with friends, and sync progress with cloud save.">
-    <title>Coin Pusher Frenzy</title>
+    <meta property="og:description" data-i18n-attr="content:home.metaDesc" content="Coin Pusher Frenzy is a casual mobile game that combines classic arcade coin pusher physics with Roguelike deck building strategy. Compete on Google Play Games leaderboards, play with friends, and sync progress with cloud save.">
+    <title data-i18n="home.title">Coin Pusher Frenzy</title>
     <style>
         * {
             margin: 0;
@@ -17,27 +17,59 @@
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", Arial, Helvetica, sans-serif;
             font-size: 15px;
             line-height: 1.6;
             color: #333;
             background: #fff;
         }
 
-        .back-link {
+        .top-bar {
             background: #2c3e50;
             padding: 10px 20px;
             font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
         }
 
-        .back-link a {
+        .top-bar a {
             color: #bdc3c7;
             text-decoration: none;
         }
 
-        .back-link a:hover {
+        .top-bar a:hover {
             color: #fff;
             text-decoration: underline;
+        }
+
+        .lang-switch {
+            display: flex;
+            gap: 6px;
+            flex-shrink: 0;
+        }
+
+        .lang-btn {
+            border: 1px solid rgba(255,255,255,0.35);
+            background: transparent;
+            color: #bdc3c7;
+            font-size: 12px;
+            line-height: 1;
+            padding: 6px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .lang-btn:hover {
+            color: #fff;
+            border-color: rgba(255,255,255,0.7);
+        }
+
+        .lang-btn.active {
+            background: #fff;
+            color: #2c3e50;
+            border-color: #fff;
         }
 
         .header-banner {
@@ -81,6 +113,19 @@
             position: relative;
             letter-spacing: -1px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header-banner .brand-english {
+            margin-top: 10px;
+            font-size: 20px;
+            font-weight: 500;
+            color: #dce3ea;
+            position: relative;
+            letter-spacing: 0.5px;
+        }
+
+        .header-banner .brand-english:empty {
+            display: none;
         }
 
         .content {
@@ -166,6 +211,10 @@
                 font-size: 36px;
             }
 
+            .header-banner .brand-english {
+                font-size: 16px;
+            }
+
             .header-banner .logo {
                 width: 90px;
                 height: 90px;
@@ -194,6 +243,10 @@
                 font-size: 28px;
             }
 
+            .header-banner .brand-english {
+                font-size: 15px;
+            }
+
             .screenshot {
                 min-width: 120px;
                 max-width: 140px;
@@ -202,69 +255,75 @@
     </style>
 </head>
 <body>
-    <div class="back-link">
-        <a href="index.html">&larr; Back to Home</a>
+    <div class="top-bar">
+        <a href="index.html" data-i18n="home.back">&larr; Back to Home</a>
+        <div class="lang-switch">
+            <button type="button" class="lang-btn" data-lang="en" data-i18n="lang.en">EN</button>
+            <button type="button" class="lang-btn" data-lang="zh" data-i18n="lang.zh">中文</button>
+        </div>
     </div>
 
     <div class="header-banner">
-        <img src="game-logo.png" alt="Coin Pusher Frenzy Logo" class="logo">
-        <h1>Coin Pusher Frenzy</h1>
+        <img src="game-logo.png" alt="Coin Pusher Frenzy Logo" class="logo" data-i18n-attr="alt:home.logoAlt">
+        <h1 data-i18n="home.brandName">Coin Pusher Frenzy</h1>
+        <p class="brand-english" data-i18n="home.brandEnglish"></p>
     </div>
 
     <div class="content">
         <div class="about-section">
-            <h2>About Coin Pusher Frenzy</h2>
-            <p><strong>Coin Pusher Frenzy</strong> is a mobile game application designed for casual gaming entertainment. It brings the classic arcade coin pusher experience to your smartphone, combined with innovative Roguelike deck building mechanics.</p>
+            <h2 data-i18n="home.aboutTitle">About Coin Pusher Frenzy</h2>
+            <p data-i18n="home.aboutIntro" data-i18n-html="true"><strong>Coin Pusher Frenzy</strong> is a mobile game application designed for casual gaming entertainment. It brings the classic arcade coin pusher experience to your smartphone, combined with innovative Roguelike deck building mechanics.</p>
             
-            <h3>App Purpose</h3>
-            <p>The purpose of Coin Pusher Frenzy is to provide players with a fun, engaging casual gaming experience that combines the satisfying physics of coin pusher machines with strategic deck building gameplay. Players can enjoy quick gaming sessions while progressively unlocking new items and strategies.</p>
+            <h3 data-i18n="home.purposeTitle">App Purpose</h3>
+            <p data-i18n="home.purposeBody">The purpose of Coin Pusher Frenzy is to provide players with a fun, engaging casual gaming experience that combines the satisfying physics of coin pusher machines with strategic deck building gameplay. Players can enjoy quick gaming sessions while progressively unlocking new items and strategies.</p>
 
-            <h3>Google Play Games Services and User Data</h3>
-            <p><strong>Coin Pusher Frenzy</strong> uses Google Play Games Services so players can sign in with their Google account. We request Google-related permissions only to provide the following features:</p>
+            <h3 data-i18n="home.googleTitle">Google Play Games Services and User Data</h3>
+            <p data-i18n="home.googleIntro" data-i18n-html="true"><strong>Coin Pusher Frenzy</strong> uses Google Play Games Services so players can sign in with their Google account. We request Google-related permissions only to provide the following features:</p>
             <ul>
-                <li><strong>Leaderboards</strong> – Use your Google Play Games player profile (including your Play Games nickname) to submit scores and display rankings.</li>
-                <li><strong>Friends</strong> – With your permission, access your Google Play Games friends list so you can share progress, compare scores, or play socially with friends.</li>
-                <li><strong>Cloud Save</strong> – Store and restore game progress through Google Play Games Saved Games (stored in the app's private Google Drive app data area).</li>
+                <li data-i18n="home.googleLeaderboards" data-i18n-html="true"><strong>Leaderboards</strong> – Use your Google Play Games player profile (including your Play Games nickname) to submit scores and display rankings.</li>
+                <li data-i18n="home.googleFriends" data-i18n-html="true"><strong>Friends</strong> – With your permission, access your Google Play Games friends list so you can share progress, compare scores, or play socially with friends.</li>
+                <li data-i18n="home.googleCloud" data-i18n-html="true"><strong>Cloud Save</strong> – Store and restore game progress through Google Play Games Saved Games (stored in the app's private Google Drive app data area).</li>
             </ul>
-            <p>During gameplay, the Application may also collect gameplay and user behavior data (for example, session activity, feature usage, and progress-related events). This data is used for game analytics to understand how the game is played and to help improve game balance, stability, and overall player experience.</p>
-            <p>Google user data is used only for these purposes. We do not sell Google user data. For more details, please see our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+            <p data-i18n="home.googleAnalytics">During gameplay, the Application may also collect gameplay and user behavior data (for example, session activity, feature usage, and progress-related events). This data is used for game analytics to understand how the game is played and to help improve game balance, stability, and overall player experience.</p>
+            <p data-i18n="home.googlePrivacy" data-i18n-html="true">Google user data is used only for these purposes. We do not sell Google user data. For more details, please see our <a href="privacy-policy.html">Privacy Policy</a>.</p>
             
-            <h3>Key Features</h3>
+            <h3 data-i18n="home.featuresTitle">Key Features</h3>
             <ul>
-                <li><strong>Classic Coin Pusher Gameplay</strong> – Drop coins onto the pusher platform and watch them fall to earn rewards</li>
-                <li><strong>Roguelike Deck Building</strong> – Collect and combine powerful items to create unique strategies</li>
-                <li><strong>Randomly Generated Stages</strong> – Each playthrough offers a fresh, unique challenge</li>
-                <li><strong>Strategic Planning</strong> – Plan your moves carefully to maximize your score</li>
-                <li><strong>Lucky Spin Bonus</strong> – Spin the wheel for bonus rewards and special power-ups</li>
-                <li><strong>Leaderboards</strong> – Sign in with Google Play Games to compete on rankings using your Play Games nickname</li>
-                <li><strong>Friends</strong> – Share and play with your Google Play Games friends</li>
-                <li><strong>Cloud Save</strong> – Sync your progress across devices with Google Play Games cloud save</li>
+                <li data-i18n="home.feature1" data-i18n-html="true"><strong>Classic Coin Pusher Gameplay</strong> – Drop coins onto the pusher platform and watch them fall to earn rewards</li>
+                <li data-i18n="home.feature2" data-i18n-html="true"><strong>Roguelike Deck Building</strong> – Collect and combine powerful items to create unique strategies</li>
+                <li data-i18n="home.feature3" data-i18n-html="true"><strong>Randomly Generated Stages</strong> – Each playthrough offers a fresh, unique challenge</li>
+                <li data-i18n="home.feature4" data-i18n-html="true"><strong>Strategic Planning</strong> – Plan your moves carefully to maximize your score</li>
+                <li data-i18n="home.feature5" data-i18n-html="true"><strong>Lucky Spin Bonus</strong> – Spin the wheel for bonus rewards and special power-ups</li>
+                <li data-i18n="home.feature6" data-i18n-html="true"><strong>Leaderboards</strong> – Sign in with Google Play Games to compete on rankings using your Play Games nickname</li>
+                <li data-i18n="home.feature7" data-i18n-html="true"><strong>Friends</strong> – Share and play with your Google Play Games friends</li>
+                <li data-i18n="home.feature8" data-i18n-html="true"><strong>Cloud Save</strong> – Sync your progress across devices with Google Play Games cloud save</li>
             </ul>
             
-            <h3>Who Is It For?</h3>
-            <p>Coin Pusher Frenzy is designed for casual gamers who enjoy arcade-style games and strategy games. It's suitable for players of all ages looking for a fun, free-to-play mobile gaming experience that is easy to pick up but offers depth for those who want to master it.</p>
+            <h3 data-i18n="home.whoTitle">Who Is It For?</h3>
+            <p data-i18n="home.whoBody">Coin Pusher Frenzy is designed for casual gamers who enjoy arcade-style games and strategy games. It's suitable for players of all ages looking for a fun, free-to-play mobile gaming experience that is easy to pick up but offers depth for those who want to master it.</p>
         </div>
 
         <div class="screenshots">
             <div class="screenshot">
-                <img src="screenshot1.png" alt="Game Screenshot 1">
+                <img src="screenshot1.png" alt="Game Screenshot 1" data-i18n-attr="alt:home.shot1">
             </div>
             <div class="screenshot">
-                <img src="screenshot2.png" alt="Game Screenshot 2">
+                <img src="screenshot2.png" alt="Game Screenshot 2" data-i18n-attr="alt:home.shot2">
             </div>
             <div class="screenshot">
-                <img src="screenshot3.png" alt="Game Screenshot 3">
+                <img src="screenshot3.png" alt="Game Screenshot 3" data-i18n-attr="alt:home.shot3">
             </div>
             <div class="screenshot">
-                <img src="screenshot4.png" alt="Game Screenshot 4">
+                <img src="screenshot4.png" alt="Game Screenshot 4" data-i18n-attr="alt:home.shot4">
             </div>
         </div>
 
         <div class="links">
-            <p>Google Play: <a href="https://play.google.com/store/apps/details?id=com.sincen.coin_pusher_frenzy" target="_blank">Coin Pusher Frenzy</a></p>
-            <p>Privacy Policy: <a href="privacy-policy.html">Privacy Policy</a></p>
-            <p>Email: funing0921@gmail.com</p>
+            <p><span data-i18n="home.playLabel">Google Play:</span> <a href="https://play.google.com/store/apps/details?id=com.sincen.coin_pusher_frenzy" target="_blank" data-i18n="home.playLink">Coin Pusher Frenzy</a></p>
+            <p><span data-i18n="home.privacyLabel">Privacy Policy:</span> <a href="privacy-policy.html" data-i18n="home.privacyLink">Privacy Policy</a></p>
+            <p><span data-i18n="home.emailLabel">Email:</span> funing0921@gmail.com</p>
         </div>
     </div>
+    <script src="i18n.js"></script>
 </body>
 </html>
